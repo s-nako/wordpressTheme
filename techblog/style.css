@@ -1,0 +1,423 @@
+/*
+Theme Name: Techblog
+Theme URI: #
+Author: Nako
+Author URI: https://s-nako.work
+Description: This is the simplest theme for engineer's technical blog
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: techblog
+Domain Path: /languages/
+Tags: blog, news,
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+/*-------------------
+global
+-------------------*/
+*{
+    word-wrap: break-word;
+}
+body {
+    color: #6B6B6B;
+    background-color:#DADADA;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    font-size: 14px;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-weight: 700;
+    font-family: 'Roboto Slab', sans-serif;
+}
+h1,h2,h3
+{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h4,h5,h6,
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h1{
+    font-size: 28px;
+    color: #222222;
+}
+h2{
+    font-size: 24px;
+    color: #face55;
+    background-color:#505059;
+}
+h3{
+    font-size: 20px;
+    color:#444444;
+    background-color:#dddddd;
+}
+h4{
+    color:#555555;
+    font-size: 16px;
+}
+h5{
+    color:#555555;
+    font-size: 14px;
+}
+h6{
+    color:#555555;
+    font-size: 13px;
+}
+a {
+    color: #DA4453;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+a:hover,
+a:focus {
+    color: #555555;
+    text-decoration: none;
+}
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+img, video {
+    height: auto;
+    max-width: 100%;
+}
+
+.cp_embed_wrapper {
+    height: auto;
+    max-width: 100%;
+}
+
+.container{
+    max-width:1200px;
+    min-width:80%;
+    overflow: hidden;
+    margin:auto;
+}
+#main{
+     float: left;
+     margin:auto;
+     width:70%;
+     overflow: hidden;    /*margin-right:10px;*/
+}
+
+
+.main-content{
+    max-width: 900px;
+    min-width: 320px;
+    width: 90%;
+    margin:auto;
+}
+
+a.category{
+    font-size: 13px;
+    background-color: #777777;
+    color:#face55;
+    border-radius: 100vh;
+    margin:0 5px 0 0;
+    padding:0 10px 0 10px;
+}
+
+/*-------------------
+sidebar
+-------------------*/
+#sidebar {
+    background-color: #ffffff;
+    padding:20px;
+    width:20%;
+    min-width: 180px;
+    margin-top:10px;
+    float: left;
+}
+
+@media (max-width: 800px) {
+   #main{
+        width: 100%;
+    }
+    #sidebar {
+        width:100%;
+    }
+}
+
+/*-------------------
+header
+-------------------*/
+header{
+    background-color: #444;
+}
+.header-main{
+    margin:auto;
+    max-width:1200px;
+    width:80%;
+}
+.site-title{
+    max-width: 900px;
+    min-width: 320px;
+    width:90%;
+}
+.title-link {
+    width: 300px;
+    height: 100px;
+    line-height: 50px;
+    text-align:center;
+    color: #ccc;
+    font-size:35px;
+    font-weight: 900;
+}
+
+.site-description{
+    font-size:18px;
+    font-weight: 800;
+    color: #999;
+}
+
+.nav {
+    list-style: none;
+    width: 100%;
+    font-size: 0;
+}
+ 
+.nav li {
+    text-align: center;
+    background-color: #eee;
+    display: inline-block;
+    font-size: 16px;
+    padding:3px 5px 3px 5px;
+    margin:0 5px 0 5px;
+}
+
+.nav li:hover {
+    background-color: #ddd;
+}
+ 
+.nav li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 800;
+}
+
+
+/*-------------------
+footer
+-------------------*/
+footer{
+    background-color: #444;
+    margin-top:20px;
+    height:50px;
+    padding: 5px 0;
+    clear:both;
+}
+
+.footer-main{
+    margin:auto;
+    max-width:1200px;
+    width:80%;
+}
+
+.footer-info{
+    text-align:center;
+    color:#aaa;
+}
+
+/*-scroll to top-*/
+.scroll-to-top {
+    width: 40px;
+    height: 38px;
+    background: #212121;
+    background: rgba(100, 100, 100, 0.6);
+    color: #FFF;
+    bottom: 40px;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    z-index: 999;
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+    padding-top:2px;
+}
+
+.scroll-to-top:hover,
+.scroll-to-top:focus {
+    color: #face55;
+    opacity: .8;
+}
+
+/*-------------------
+Archive and Search
+-------------------*/
+.page-header{
+    margin:auto;
+    width:80%;
+}
+.page-header> h1{
+    background-color: transparent;
+}
+
+nav.navigation, nav.pagination{
+    margin:auto;
+    width:80%;
+}
+
+/*Posts post items*/
+div.post-item, div.page-item{
+    background-color: #fdfdfd;
+    margin-top: 20px;
+    padding: 25px 40px;
+}
+
+.entry-title, .entry-title a, .message{
+    font-size: 28px;
+    color: #face55;
+    background-color: #222222;
+    margin: auto;
+}
+div.post-item > h2 > a{
+    font-family: 'Oswald', sans-serif;
+    color: #face55;
+}
+.description{
+    color: #555555;
+}
+.post-info{
+    padding-top: 5px;
+}
+.post-date{
+    padding-top:10px;
+    padding-right: 20px;
+    font-size: 15px;
+}
+.post-categories{
+    padding-right: 5px;
+    font-size: 15px;
+}
+.post-tags{
+    padding-right: 5px;
+    font-size: 15px;
+}
+.sns .twitter-share-button{
+    padding-top: 5px;
+}
+
+
+/*-------------------
+page.php
+-------------------*/
+h1.entry-title {
+    background-color: #222222;
+    color: #face55;
+    text-decoration: none;
+    margin: auto;
+}
+
+@media{
+    .MathJax_Display{
+        height: 55px;
+        overflow-x: auto;
+    }
+}
+
+/*-------------------
+comments.php
+-------------------*/
+.comment-area{
+    max-width: 900px;
+    min-width: 320px;
+    width: 90%;
+    margin:auto;
+    background-color: #fff;
+    margin-top:20px;
+}
+.comment-main, .comment-respond{
+    padding:10px;
+}
+.comment-list {
+    margin-left: 0px;
+    padding-left: 0;
+}
+.comment-list,
+.comment-list .children {
+    list-style: none;
+}
+.comment .comment-body {
+    background-color: #efefef;
+    margin: 10px;
+    overflow: hidden;
+    padding: 10px;
+    padding-left: 50px;
+    position: relative;
+    border-radius: 5px;
+}
+#comment-form-title {
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+.comment-author {
+    font-size: 16px;
+}
+.vcard .avatar {
+    width:40px;
+    border-radius: 5px;
+}
+.comment-meta{
+    font-size: 12px;
+    line-height: 12px;
+    padding:0;
+}
+.reply{
+    width: 50px;
+    background: #888;
+    border-radius: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 80%;
+}
+.reply a{
+    margin:auto;
+    font-size: 10px;
+    color:#face55;
+}
+.comment-respond label {
+    display: block;
+    font-weight: normal;
+}
+#submit{
+    padding: 0.25em 0.5em;
+    font-size: 14px;
+    color:#face55;
+    background: #777;
+    border-radius: 3px;
+    font-weight: bold;
+    border: solid 3px #face55;
+    text-transform: uppercase;
+}
+#submit:active{
+  background: #ddd;
+}
+
+
+/*-------------------
+search.php
+-------------------*/
+.search-form{
+    max-width: 400px
+}
+.search-query{
+    width:70%;
+}
+.search-submit{
+    height:100%;
+    background-color: #face55;
+    border-radius: 3px;
+}
