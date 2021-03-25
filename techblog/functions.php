@@ -36,6 +36,39 @@ function techblog_widgets_init() {
 
 add_action( 'widgets_init', 'techblog_widgets_init' );
 
+
+/*-------------------
+Theme Customizer
+-------------------*/
+function techblog_customize_register( $wp_customize ) {
+	$wp_customize->add_section( 'original_customize',
+		array(
+			'title'     => 'Original Customize',
+			'priority'  => 10,
+		)
+	);
+	$wp_customize->add_setting( 'list_excerpt_setting',
+		array(
+		)
+	);
+	$wp_customize->add_control( 'list_excerpt_selection',
+		array(
+			'settings'  => 'list_excerpt_setting',
+			'label'     => 'Page List',
+			'section'   => 'original_customize',
+			'type'      => 'radio',
+			'default'   => 'excerpt',
+			'choices' 	=> array(
+				'excerpt' => __( 'Excerpt' ),
+				'post'  => __( 'Post' ),
+			),
+		)
+	);
+}
+
+add_action( 'customize_register', 'techblog_customize_register' );
+
+
 /*-------------------
 enqueue scripts
 -------------------*/
